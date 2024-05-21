@@ -80,11 +80,15 @@ export default class Products extends Component {
             </div>
           ))}
         </div>
-        <button
-          onClick={() => this.setState({ offset: this.state.offset + 1 })}
-        >
-          See more
-        </button>
+        {this.state.categoryValue === "/products" ? (
+          <button
+            onClick={() => this.setState({ offset: this.state.offset + 1 })}
+          >
+            See more
+          </button>
+        ) : (
+          <h2>Tanlangan categoriya bo`yicha hamma cardlar soni tugadi</h2>
+        )}
       </section>
     );
   }
